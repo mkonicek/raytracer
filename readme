@@ -1,0 +1,13 @@
+Distributed raytracer written in C#.
+
+- LucidServer is the master app.
+- LucidClient is the worker. Run it on multiple machines and connect to the LucidServer.
+  The client downloads the definition of the scene and starts rendering parts of the image.
+  You can also start and connect new clients during rendering.
+  Crashed clients are not a problem - their job will be assigned to someone else.
+- LucidLib is a generic library for defining distributed computations. 
+- Raytracing is a generic raytracing implementation (see Scene.cs). 
+- Editor is a very simple program (no UI) used to generate test scenes (see scenes.cs).
+  (It needs scene files to be present in its bin folder)
+
+Tests on 7 machines show almost linear speedup as expected.
