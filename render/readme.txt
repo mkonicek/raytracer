@@ -1,0 +1,1 @@
+Wavy surfaces were creating by altering surface normal by some function of (x, y, z).
